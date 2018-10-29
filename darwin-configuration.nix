@@ -23,6 +23,15 @@
       "$HOME/.nix-defexpr/channels"
     ];
 
+  environment.systemPackages = with pkgs; [
+    httpie
+    htop
+    siege
+    jq
+    mosh
+    kubectl
+  ];
+
   environment.shellAliases = rec {
     ll = "${pkgs.coreutils}/bin/ls -lahGFT0 --group-directories-first";
     gsp = "${pkgs.git}/bin/git stash && ${pkgs.git}/bin/git pull";
