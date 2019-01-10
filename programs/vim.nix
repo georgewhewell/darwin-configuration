@@ -6,7 +6,8 @@
     enableSensible = true;
     extraKnownPlugins = {
       fzf-vim = pkgs.vimUtils.buildVimPluginFrom2Nix {
-        name = "fzf";
+        pname = "fzf";
+        version = "0.1";
         src = pkgs.fetchgit {
           url = "git://github.com/junegunn/fzf.vim";
           rev = "c6275ee1080de4d94bb3f3cfd6e7cc0ccecd9e64";
@@ -15,7 +16,8 @@
         dependencies = [];
       };
       lightline = pkgs.vimUtils.buildVimPluginFrom2Nix {
-        name = "lightline";
+        pname = "lightline";
+        version = "0.1";
         src = pkgs.fetchgit {
           url = "git://github.com/itchyny/lightline.vim";
           rev = "47765c787ddc981c2eab6105ade84067d164893c";
@@ -24,7 +26,8 @@
         dependencies = [];
       };
       editorconfig = pkgs.vimUtils.buildVimPluginFrom2Nix {
-        name = "editorconfig";
+        pname = "editorconfig";
+        version = "0.1";
         src = pkgs.fetchgit {
           url = "git://github.com/editorconfig/editorconfig-vim";
           rev = "2c3e5323609d97ad7bda6fc22ae1f7746caab3d4";
