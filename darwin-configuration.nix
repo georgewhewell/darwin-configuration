@@ -27,9 +27,11 @@
     httpie
     htop
     siege
+    wrk
     jq
     mosh
     kubectl
+    tmux
   ];
 
   environment.shellAliases = rec {
