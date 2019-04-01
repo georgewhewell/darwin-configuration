@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
-{
+let
+  myPkgs = import ./pkgs { inherit pkgs; };
+in {
   imports = [
     ./system.nix
     ./programs/vim.nix
@@ -23,7 +25,7 @@
       "$HOME/.nix-defexpr/channels"
     ];
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; with myPkgs; [
     httpie
     htop
     siege
@@ -32,6 +34,10 @@
     mosh
     kubectl
     tmux
+    exa
+    vault
+    pwgen
+    shipcat
   ];
 
   environment.shellAliases = rec {
