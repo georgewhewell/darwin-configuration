@@ -35,9 +35,9 @@
   ];
 
   environment.shellAliases = rec {
-    ll = "${pkgs.coreutils}/bin/ls -lahGFT0 --group-directories-first";
-    gsp = "${pkgs.git}/bin/git stash && ${pkgs.git}/bin/git pull";
-    gspp = "${gsp} && ${pkgs.git}/bin/git stash pop";
+    ll = "exa --long --header --git --git-ignore --sort=created";
+    gsp = "git stash && git pull";
+    gspp = "${gsp} && git stash pop";
     slugify = "iconv -t ascii//TRANSLIT | sed -E 's/[~\^]+//g' | sed -E 's/[^a-zA-Z0-9]+/-/g' | sed -E 's/^-+\|-+$//g' | tr A-Z a-z";
   };
 
