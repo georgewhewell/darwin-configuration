@@ -48,7 +48,6 @@
       let g:ale_python_auto_pipenv = 0
       let g:ale_python_flake8_executable = '${pkgs.python3.pkgs.flake8}/bin/flake8'
       let g:ale_python_mypy_executable = '${pkgs.python3.pkgs.mypy}/bin/mypy'
-      let g:ale_python_pylint_executable = '${pkgs.python3.pkgs.pylint}/bin/pylint'
     '';
   };
 
