@@ -1,5 +1,4 @@
 { stdenv, pkgs, rustPlatform, fetchFromGitHub, pkgconfig, openssl, darwin
-, withRaftcat ? true
 }:
 
 rustPlatform.buildRustPackage rec {
@@ -19,8 +18,6 @@ rustPlatform.buildRustPackage rec {
   ] ++ stdenv.lib.optionals stdenv.isDarwin [
     darwin.apple_sdk.frameworks.Security
   ];
-
-  cargoBuildFlags = pkgs.lib.optionals withRaftcat [ "-p raftcat" ];
 
   propagatedBuildInputs = with pkgs; [
     kubernetes
