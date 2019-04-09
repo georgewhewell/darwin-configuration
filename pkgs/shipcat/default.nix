@@ -1,8 +1,9 @@
 { stdenv, pkgs, rustPlatform, fetchFromGitHub, pkgconfig, openssl, darwin
+, pkgname ? "shipcat"
 }:
 
 rustPlatform.buildRustPackage rec {
-  pname = "shipcat";
+  pname = pkgname;
   version = "0.95.0";
 
   src = fetchFromGitHub {
@@ -18,6 +19,8 @@ rustPlatform.buildRustPackage rec {
   ] ++ stdenv.lib.optionals stdenv.isDarwin [
     darwin.apple_sdk.frameworks.Security
   ];
+
+  cargoBuildFlags = [ "-p ${pkgname}" ];
 
   propagatedBuildInputs = with pkgs; [
     kubernetes

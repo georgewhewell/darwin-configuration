@@ -38,6 +38,7 @@ in {
     vault
     pwgen
     shipcat
+    raftcat
     watch
     ripgrep
   ];
