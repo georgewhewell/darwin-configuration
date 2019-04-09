@@ -38,6 +38,8 @@ in {
     vault
     pwgen
     shipcat
+    watch
+    ripgrep
   ];
 
   environment.shellAliases = rec {
