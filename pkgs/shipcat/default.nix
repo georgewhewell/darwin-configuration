@@ -4,13 +4,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = pkgname;
-  version = "0.95.0";
+  version = "0.100.1";
 
   src = fetchFromGitHub {
     owner = "Babylonpartners";
     repo = "shipcat";
     rev = "${version}";
-    sha256 = "0q7gjxm3w9ml4am6c8bp2s7qdgz08ph6hdn47jz6ziv2nwsnnr1p";
+    sha256 = "1zim988xv3nfjg2dpl184dlc1x9i7jm801549pajxhw332il3sb5";
   };
 
   cargoSha256 = "1z8ljc1151vpzf8mm9a42w2s5s0iz13dxmwarsvblgh17av5ydyd";
