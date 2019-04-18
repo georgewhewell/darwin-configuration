@@ -31,6 +31,7 @@ in {
     siege
     wrk
     jq
+    yq
     mosh
     kubectl
     tmux
