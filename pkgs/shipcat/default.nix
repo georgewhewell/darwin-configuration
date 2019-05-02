@@ -27,6 +27,7 @@ rustPlatform.buildRustPackage rec {
     kubernetes-helm
     vault
     jq
+    yq
   ];
 
   # thread 'config_test' panicked at 'assertion failed: fullcfg.is_ok()', shipcat_cli/tests/common.rs:42:5
