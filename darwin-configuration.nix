@@ -42,6 +42,11 @@ in {
     raftcat
     watch
     ripgrep
+    circleci-cli
+    (runCommand "circleci" {} ''
+      mkdir -p $out/bin
+      ln -s ${circleci-cli}/bin/circleci-cli $out/bin/circleci
+    '')
   ];
 
   environment.shellAliases = rec {
