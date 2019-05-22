@@ -26,6 +26,7 @@ in {
     ];
 
   environment.systemPackages = with pkgs; with myPkgs; [
+    coreutils
     httpie
     htop
     siege
